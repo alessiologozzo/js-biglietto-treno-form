@@ -37,11 +37,11 @@ function checkInput(){
     distance = getPositiveInteger();
     userName = getString();
     
-    if(Number.isNaN(distance) && userName.localeCompare("error") == 0)
+    if(Number.isNaN(distance) && userName.localeCompare("#error") == 0)
         messageBox.innerHTML = RATE + "<br><br>Errore. Inserisci valori validi";
     else if(Number.isNaN(distance))
         messageBox.innerHTML = RATE + "<br><br>Errore. La distanza deve essere un numero intero positivo. Riprova";
-    else if(userName.localeCompare("error") == 0)
+    else if(userName.localeCompare("#error") == 0)
         messageBox.innerHTML = RATE + "<br><br>Errore. Il nome può contenere soltanto lettere. Riprova";
     else
         showResult();
@@ -58,7 +58,7 @@ function showResult(){
         ticketFull.classList.add("d-none");
 
     code = Math.floor(Math.random() * 10001) + 90000;
-    carriage = Math.floor(Math.random() * 9);
+    carriage = Math.floor(Math.random() * 9) + 1;
 
     ticketCost = KM_COST * distance;
 
@@ -111,7 +111,7 @@ function getString(){
     s = nameBox.value;
 
     if(!s.match(letters))
-        s = "error";
+        s = "#error";
 
     return s;
 }
