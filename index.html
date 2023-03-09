@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>js-biglietto-treno-form</title>
+</head>
+<body>
+
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="row d-flex justify-content-center my-5">
+
+                <div id="message-box" class="box al-width">Benvenuto in stazione! Sono il tuo assistente ferroviario. Schiaccia il bottone per proseguire</div>
+            
+            </div>
+            <div class="row d-none d-flex justify-content-between al-width">
+                    
+                    <div class="d-flex flex-column col-12 col-md-4">
+                        <h4 class="text-center">Nome</h4>
+                        <input id="name-box" type="text" placeholder="Nome...">
+                    </div>
+                    
+                    <div class="d-flex flex-column col-12 col-md-4 pt-4 pt-md-0">
+                        <h4 class="text-center">Distanza</h4>
+                        <input id="distance-box" type="text" placeholder="Distanza...">
+                    </div>
+
+                    <div class="d-flex flex-column col-12 col-md-4 pt-4 pt-md-0">
+                        <h4 class="text-center">Età</h4>
+                        <select id="age-box">
+                            <option value="adulto">Adulto</option>
+                            <option value="bambino">Bambino</option>
+                            <option value="over">Over 60</option>
+                        </select>
+                    </div>
+
+            </div>
+
+            <div class="row my-4 al-width">
+                <div class="col-12 d-flex justify-content-center gap-3 pt-1 pb-5">
+                    <div id="submit" class="al-button">Inizia</div>
+                    <div id="refresh" class="al-button d-none">Annulla</div>
+                </div>
+            </div>
+
+
+            <div class="row d-none d-flex justify-content-between al-width">
+    
+                    <div class="flex-column box col-12 col-md-8 col-xxl-4">
+                        <h4 class="py-2">Passeggero</h4>
+                        <h5 id="ticket-name" class="al-overflow pt-4 pb-2 text-uppercase"></h5>
+                    </div>
+    
+                    <div class="flex-column box col-12 col-md-4 col-xxl-2">
+                        <h4 class="py-2">Offerta</h4>
+                        <h5 id="ticket-type" class="al-overflow pt-4 pb-2 text-uppercase"></h5>
+                    </div>
+    
+                    <div class="flex-column box col-12 col-md-4 col-xxl-2">
+                        <h4 class="py-2">Carrozza</h4>
+                        <h5 id="ticket-carriage" class="al-overflow pt-4 pb-2"></h5>
+                    </div>
+    
+                    <div class="flex-column box col-12 col-md-4 col-xxl-2">
+                        <h4 class="py-2">Codice</h4>
+                        <h5 id="ticket-code" class="al-overflow pt-4 pb-2"></h5>
+                    </div>
+    
+                    <div class="flex-column box col-12 col-md-4 col-xxl-2">
+
+                        <h4 class="py-2">Costo</h4>
+
+                        <div class="d-flex gap-3 justify-content-between align-items-end al-overflow pt-4 pb-2">
+                            <h5 id="ticket-price"></h5>
+                            <h5 id="ticket-full" class="text-decoration-line-through"></h5>
+                        </div>
+                    </div>
+
+            </div>
+    
+            <i id="icon" class="fas fa-circle-notch"></i>
+
+        </div>
+
+
+
+</body>
+</html>
